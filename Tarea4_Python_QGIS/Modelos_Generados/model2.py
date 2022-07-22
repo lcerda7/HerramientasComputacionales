@@ -5,6 +5,10 @@ Group :
 With QGIS : 32208
 """
 
+#######################################################################
+# se llaman los comandos a utilizar
+#######################################################################
+
 from qgis.core import QgsProcessing
 from qgis.core import QgsProcessingAlgorithm
 from qgis.core import QgsProcessingMultiStepFeedback
@@ -12,6 +16,9 @@ from qgis.core import QgsProcessingParameterRasterDestination
 from qgis.core import QgsCoordinateReferenceSystem
 import processing
 
+######################################################
+# se genera el archivo de model2
+#####################################################
 
 class Model2(QgsProcessingAlgorithm):
 
@@ -24,8 +31,13 @@ class Model2(QgsProcessingAlgorithm):
         feedback = QgsProcessingMultiStepFeedback(2, model_feedback)
         results = {}
         outputs = {}
-
+        
+#######################################################################
         # Warp (reproject)
+#######################################################################
+# Se reproyecta hdr.adf
+#######################################################################
+
         alg_params = {
             'DATA_TYPE': 0,  # Use Input Layer Data Type
             'EXTRA': '',
@@ -47,8 +59,13 @@ class Model2(QgsProcessingAlgorithm):
         feedback.setCurrentStep(1)
         if feedback.isCanceled():
             return {}
-
+        
+#######################################################################
         # Extract projection
+#######################################################################
+# Extraemos la proyección del archivo raster 
+#######################################################################
+
         alg_params = {
             'INPUT': outputs['WarpReproject']['OUTPUT'],
             'PRJ_FILE_CREATE': True
