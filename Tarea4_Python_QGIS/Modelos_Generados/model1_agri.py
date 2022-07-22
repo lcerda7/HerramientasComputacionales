@@ -4,6 +4,9 @@ Name : model1
 Group : 
 With QGIS : 32208
 """
+################################################################
+#Se llaman los scripts a utilizar
+################################################################
 
 from qgis.core import QgsProcessing
 from qgis.core import QgsProcessingAlgorithm
@@ -27,8 +30,13 @@ class Model1(QgsProcessingAlgorithm):
         feedback = QgsProcessingMultiStepFeedback(4, model_feedback)
         results = {}
         outputs = {}
+        
+#######################################################################
+# Combar (reproyectar)
+#######################################################################
+#se reproyecta el mapa, creará nuevos archivos en el directorio temporal en Windows
+#######################################################################
 
-        # Combar (reproyectar)
         alg_params = {
             'DATA_TYPE': 0,  # Usar el tipo de datos de la capa de entrada
             'EXTRA': '',
@@ -50,8 +58,11 @@ class Model1(QgsProcessingAlgorithm):
         feedback.setCurrentStep(1)
         if feedback.isCanceled():
             return {}
-
-        # Quitar campo(s)
+##############################################################
+# Quitar campo(s)
+###############################################################
+# Se eliminan las variables que no se van a utilizar, si se nos olvida quitar una variable, aqui podemos escribirla para elimnarla
+###############################################################
         alg_params = {
             'COLUMN': ['GID_0','NAME_0','GID_1','GID_2','HASC_2','CC_2','TYPE_2','NL_NAME 2','VARNAME_2','NL_NAME_1','NL_NAME_2',' ENGTYPE_2'],
             'INPUT': 'C:/Users/Luis Cerda/Documents/UdeSA/Cursos/IIT/HCI/Clase4/input/gadm41_USA_shp/gadm41_USA_2.shp',
@@ -62,8 +73,11 @@ class Model1(QgsProcessingAlgorithm):
         feedback.setCurrentStep(2)
         if feedback.isCanceled():
             return {}
-
-        # Agregar campo que auto-incrementa 
+####################################################################
+# Agregar campo que auto-incrementa 
+####################################################################
+#Esto creará valores incrementados para las características existentes pero no para las nuevas
+####################################################################
         alg_params = {
             'FIELD_NAME': 'cid',
             'GROUP_FIELDS': [''],
@@ -81,8 +95,11 @@ class Model1(QgsProcessingAlgorithm):
         feedback.setCurrentStep(3)
         if feedback.isCanceled():
             return {}
-
-        # Estadísticas de zona
+############################################################
+# Estadísticas de zona
+############################################################
+# Esto nos permite calcular estadísticas sobre píxeles de una banda ráster que se encuentran dentro de polígonos/zonas en una capa vectorial
+############################################################
         alg_params = {
             'COLUMN_PREFIX': '_',
             'INPUT': outputs['AgregarCampoQueAutoincrementa']['OUTPUT'],
@@ -94,7 +111,7 @@ class Model1(QgsProcessingAlgorithm):
         outputs['EstadsticasDeZona'] = processing.run('native:zonalstatisticsfb', alg_params, context=context, feedback=feedback, is_child_algorithm=True)
         results['Zonal'] = outputs['EstadsticasDeZona']['OUTPUT']
         return results
-
+     
     def name(self):
         return 'model1'
 
@@ -109,3 +126,7 @@ class Model1(QgsProcessingAlgorithm):
 
     def createInstance(self):
         return Model1()
+    
+    ##################################################################
+    # Final del programa model1_Agri
+    ##################################################################
