@@ -16,6 +16,9 @@ from qgis.core import QgsProcessingParameterFeatureSink
 from qgis.core import QgsCoordinateReferenceSystem
 import processing
 
+######################################################
+# se genera el archivo de model1
+#####################################################
 
 class Model1(QgsProcessingAlgorithm):
 
