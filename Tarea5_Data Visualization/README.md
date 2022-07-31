@@ -7,6 +7,6 @@ En esta carpeta se encuantran dos subcarpetas **tarea1** y **tarea2**, que conti
 * **Tarea2** Creamos mapas con robos en la ciudad de Londres, y mostramos como varian en cada barrio o *borough*.
 Utilizamos **ggplot** y **Tmap** de R, y ademas **spmap** de Stata. Además, en la carpeta se encuentra el documento **TP_5_Tarea2_Herramientas_Computacionales_Cerda__L___Rigirozzi__G** en donde se realiza un pequeño informe sobre los mapas elaborados y lo que se muestra en cada uno de ellos.
 
-Se adjuntan todos los scripts de cada tarea.
+Se adjuntan todos los scripts de cada tarea en cada carpeta.
 
 
