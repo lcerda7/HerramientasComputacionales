@@ -1,6 +1,6 @@
 # Trabajo Final
 **Trabajo realizado por Luis Cerda y Gonzalo Rigirozzi**
-Esta carpeta contine los archivos **preliminares** para la entrega del trabajo final.
+Esta carpeta contine los archivos *preliminares* para la entrega del trabajo final.
 
 
 ## Contenido *preliminar*
