@@ -6,7 +6,8 @@
 
 ## Contenido
 
-* Carpeta pictures: contine las 6 imagenes de los mapas utilizados para la realización del Informe Final.
-* Carpeta Programas: contiene .
+* **Carpeta Pictures:** contine las 6 imagenes de los mapas utilizados para la realización del Informe Final.
+* **Carpeta Programs:** contiene el archivo generador de los mapas en QGIS, así como los shapefiles necesarios para la replica.
+* **Carpeta Docs:** contiene el paper de Nunn y Wantchekon (2011).
 
 
