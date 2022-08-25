@@ -14,5 +14,5 @@ A continuación, se presentan los links donde se pueden descargar la informació
 * **Carpeta Pictures:** contine las 6 imagenes de los mapas utilizados para la realización del Informe Final.
 * **Carpeta Programs:** contiene el archivo generador de los mapas en QGIS, así como los shapefiles necesarios para la replica.
 * **Carpeta Docs:** contiene el paper de Nunn y Wantchekon (2011).
-
+* **Documento Informe Final:** este documento contiene la replica de los mapas presentados por Nunn y Wantchekon (2011), así como otros 4 mapas en los que se puede visualizar algunas variables georreferenciadas utilizadas por los autores.
 
