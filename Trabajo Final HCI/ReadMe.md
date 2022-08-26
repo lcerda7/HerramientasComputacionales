@@ -13,5 +13,5 @@ Esta carpeta contine los archivos para la entrega del trabajo final del componen
 * **Carpeta Docs:** contiene documentación relevante sobre actualizaciones realizadas.
 * **Carpeta Pictures:** contine las 6 imagenes de los mapas utilizados para la realización del Informe Final.
 * **Carpeta Programs:** contiene el archivo generador de los mapas en QGIS, así como los shapefiles necesarios para la replica.
-* **Documento Informe Final:** este documento contiene la replica de los mapas presentados por Nunn y Wantchekon (2011), así como otros 4 mapas en los que se puede visualizar algunas variables georreferenciadas utilizadas por los autores.
+* **Documento Informe Final:** este documento contiene la replica de los mapas presentados por Nunn y Wantchekon (2011) en la página 3230, así como otros 4 mapas en los que se puede visualizar algunas variables georreferenciadas utilizadas por los autores.
 
